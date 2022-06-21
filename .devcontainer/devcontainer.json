@@ -1,0 +1,15 @@
+{
+  "name": "sample",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/usr/local/",
+  "forwardPorts": [8080],
+  "extensions": [
+    "vscjava.vscode-java-pack", // Java全般
+    "Pivotal.vscode-boot-dev-pack", // SpringBoot用
+    "formulahendry.vscode-mysql", // MYSQL
+    "streetsidesoftware.code-spell-checker", // スペルミス防止
+    "oderwat.indent-rainbow", // インデントわかりやすく
+    "mosapride.zenkaku" // 不必要なミス防止
+  ]
+}

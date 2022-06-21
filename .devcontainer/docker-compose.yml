@@ -12,4 +12,14 @@ services:
     volumes:
       - "./mysql/init/:/docker-entrypoint-initdb.d/"
       - "./mysql/config/:/etc/mysql/conf.d/"
-
+  app:
+    image: openjdk:18-jdk-oraclelinux8
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/Users/suzukiti/dev/SpringBootApp:/usr/local/"
+    restart: always
+    tty: true
+    depends_on:
+      - "db"
