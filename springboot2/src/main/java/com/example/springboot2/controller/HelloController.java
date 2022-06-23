@@ -12,8 +12,9 @@ public class HelloController {
     return "hello";
   }
 
+  // @RequestParam(required=false)に変更(デフォルト:true)
   @GetMapping("/greeting")
-  public String greeting(@RequestParam("message") String message, Model model) {
+  public String greeting(@RequestParam(required=false) String message, Model model) {
     model.addAttribute("sample", message);
     return "hello";
   }
