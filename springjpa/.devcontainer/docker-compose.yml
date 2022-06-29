@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: jpa-mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: '256133'
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - "./mysql/init/:/docker-entrypoint-initdb.d/"
+      - "./mysql/config/:/etc/mysql/conf.d/"
+  app:
+    image: openjdk:18-jdk-oraclelinux8
+    container_name: jpa-springboot-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/Users/suzukiti/dev/SpringBootApp/springjpa:/usr/local/"
+    restart: always
+    tty: true
+    depends_on:
+      - "db"
