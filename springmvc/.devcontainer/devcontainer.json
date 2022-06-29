@@ -1,5 +1,5 @@
 {
-  "name": "sample",
+  "name": "mvc",
   "dockerComposeFile": ["./docker-compose.yml"],
   "service": "app",
   "workspaceFolder": "/usr/local/",
