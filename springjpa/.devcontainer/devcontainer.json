@@ -7,7 +7,7 @@
   "extensions": [
     "vscjava.vscode-java-pack", // Java全般
     "Pivotal.vscode-boot-dev-pack", // SpringBoot用
-    "GabrielBB.vscode-lombok", // lombok
+    "vscjava.vscode-lombok", // lombok
     "formulahendry.vscode-mysql", // MYSQL
     "streetsidesoftware.code-spell-checker", // スペルミス防止
     "oderwat.indent-rainbow", // インデントわかりやすく
