@@ -16,7 +16,7 @@ import com.example.springjpa.repository.CommentRepository;
 public class CommentController {
   private final CommentRepository repository;
 
-  // @Autowired　←constructorが一つのため、省略可
+  // @Autowired ←constructorが一つのため、省略可
   public CommentController(CommentRepository repository) {
     this.repository = repository;
   }
