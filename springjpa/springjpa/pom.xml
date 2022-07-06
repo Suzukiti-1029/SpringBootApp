@@ -55,6 +55,31 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>5.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator-core</artifactId>
+		</dependency>
+
+		<!-- bootstrap icons -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>bootstrap-icons</artifactId>
+			<version>1.8.3</version>
+		</dependency>
+
+		<!-- thymeleaf layout dialect -->
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
