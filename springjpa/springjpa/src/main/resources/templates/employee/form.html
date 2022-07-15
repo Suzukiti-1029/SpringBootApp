@@ -27,31 +27,22 @@
                 </h6>
               </div>
               <div class="card-body">
-                <!-- TODO: 社員データ -->
-                <form action="#" th:object="#" method="post">
-                  <!-- TODO: id -->
-                  <input type="hidden" th:field="#">
+                <form th:action="@{/employee/process}" th:object="${employee}" method="post">
+                  <input type="hidden" th:field="*{id}">
 
                   <div class="mb-3">
-                    <!-- TODO -->
-                    <label for="#">名前</label>
-                    <!-- TODO -->
-                    <input type="text" class="form-control" th:errorclass="is-invalid" th:field="#">
-                    <!-- TODO -->
-                    <div class="invalid-feedback" th:errors="#">
+                    <label for="name">名前</label>
+                    <input type="text" class="form-control" th:errorclass="is-invalid" th:field="*{name}">
+                    <div class="invalid-feedback" th:errors="*{name}">
                     </div>
                   </div>
 
                   <div class="mb-3">
-                    <!-- TODO -->
-                    <label for="#">部署名</label>
-                    <!-- TODO -->
-                    <select class="form-select" th:field="#">
-                      
-                      <!-- TODO: 部署名一覧 -->
-                      <th:block th:each="#">
-                        <!-- TODO: idと名前 -->
-                        <option value="#" text="#">
+                    <label for="department">部署名</label>
+                    <select class="form-select" th:field="*{department}">
+
+                      <th:block th:each="department: ${@departmentRepository.findAll()}">
+                        <option th:value="${department.id}" th:text="${department.name}">
                         </option>
                       </th:block>
                       
