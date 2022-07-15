@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="~{layout/layout}">
+  layout:decorate="~{employee/layout/layout}">
 <head>
   <meta charset="UTF-8" th:remove="tag">
 </head>
@@ -13,7 +13,7 @@
       <div class="container-fluid">
 
         <!-- トグルボタン -->
-        <div th:replace="~{fragments/sidebar :: toggler}">
+        <div th:replace="~{employee/fragments/sidebar :: toggler}">
         </div>
 
         <div class="row mh-100 align-items-center justify-content-center">
