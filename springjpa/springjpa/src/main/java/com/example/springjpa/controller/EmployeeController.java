@@ -21,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 public class EmployeeController {
   private final EmployeeRepository repository;
 
-  @GetMapping("/")
+  @GetMapping("")
   public String showList(Model model) {
     model.addAttribute("employees", repository.findAll());
     return "employee/index";
